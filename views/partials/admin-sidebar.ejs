@@ -1,0 +1,27 @@
+<div class="col-lg-3">
+      <div class="widget-blocks" >
+            <div class="row">
+                  <div class="col-lg-12 col-md-6">
+                        <div class="widget">
+                              <div class="widget-body"  style="padding-top:5px!important;">
+                                    <ul class="nav flex-column">
+                                          <li class="nav-item"> 
+                                                <a class="nav-link <%= active_menu == 'home' ? 'active' : '' %>" href="/admin">Nouvel Article</a>
+                                          </li>
+                                          <li class="nav-item">
+                                                <a class="nav-link <%= active_menu == 'articles' ? 'active' : '' %>" href="/admin-articles">Liste Article</a>
+                                          </li>
+                                          <li class="nav-item">
+                                                <a class="nav-link <%= active_menu == 'event' ? 'active' : '' %>" href="/admin-event">Evts Calendrier</a>
+                                          </li>
+                                          <li class="nav-item">
+                                                <a class="nav-link <%= active_menu == 'archive' ? 'active' : '' %>" href="/admin-archives">Archives</a>
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+     
+</div>

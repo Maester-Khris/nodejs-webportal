@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/css/splide-extension-video.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/js/splide-extension-video.min.js"></script>
+
+<style>
+      .video-splide{
+            height:400px!important;
+            width:600px!important;
+            margin-top:10px;
+      }
+      .video-splide-container{
+            width: 100%!important;
+      }
+      .video-title{
+            margin-top: 25px;
+            text-align: center;
+      }
+</style>
+<main>
+	<section class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 mb-5 mb-lg-0">
+					<article>
+                                    <h1>Video Content</h1>
+                                    <div class="d-flex justify-content-center video-splide-container">
+                                          <div class="splide video-splide">
+                                                <div class="splide__track">
+                                                      <ul class="splide__list">
+                                                            <li class="splide__slide" data-splide-html-video="/images/video.mp4">
+                                                                  <div class="splide__slide__container">
+                                                                  <img src="/images/author.jpg">
+                                                                  </div>
+                                                                  <div>
+                                                                        <h3 class="video-title">Video Title1: Most Funniest Katt Williams Roast ☺☺☺ <span></span></h3>
+                                                                  </div>
+                                                            </li>
+                                                            <li class="splide__slide" data-splide-html-video="/images/video.mp4">
+                                                                  <div class="splide__slide__container">
+                                                                  <img src="/images/author.jpg">
+                                                                  </div>
+                                                                  <div>
+                                                                        <h3 class="video-title">Video Title2: Most Funniest Katt Williams Roast ☺☺☺ <span></span></h3>
+                                                                  </div>
+                                                            </li>
+                                                            <li class="splide__slide" data-splide-html-video="/images/video.mp4">
+                                                                  <div class="splide__slide__container">
+                                                                  <img src="/images/author.jpg">
+                                                                  </div>
+                                                                  <div>
+                                                                        <h3 class="video-title">Video Title3: Most Funniest Katt Williams Roast ☺☺☺ <span></span></h3>
+                                                                  </div>
+                                                            </li>
+                                                      </ul>
+                                                </div>
+                                          </div> 
+
+                                    </div>
+                              </article>    
+				</div>
+			</div>
+		</div>
+	</section> 
+</main>
+<script>
+      document.addEventListener( 'DOMContentLoaded', function() {
+            var splide = new Splide( '.splide', {
+                  video: {
+                        loop : true,
+                        cover: false,
+                        playerOptions: {
+                              htmlVideo: {height:'100px',with:'500px',poster:''},
+                        },
+                        width:'400px',
+                        height:'50px'
+                  },
+            });
+            splide.mount(window.splide.Extensions);
+      });
+</script>

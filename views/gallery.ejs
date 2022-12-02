@@ -1,0 +1,98 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+      .gallery_content{
+            margin-top: 20px;
+      }
+      #gallery{
+            margin-left:10px;border-color: white; 
+            transform: translateY(5px); 
+      }
+</style>
+
+<main>
+	<section class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 mb-5 mb-lg-0">
+					<article>
+                                    <!-- Galerie transform: -->
+                                    <div class="d-flex justify-content-start">
+                                          <h1 id="heading">Gallerie</h1>
+                                          <select name="" id="gallery">
+                                                <option value="hiver 2018">Hiver 2018</option>
+                                                <option value="rentree 2019">Rentree 2019</option>
+                                          </select>
+                                    </div>
+                                    <div class="gallery_content" >
+                                          <div class="hiver_2018">
+                                                <div class="row">
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                </div>
+                                          </div>
+                                          <div class="rentree_2019" style="display: none;">
+                                                <div class="row">
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                      <div class="col-md-2 mb-4">
+                                                            <img src="https://via.placeholder.com/150x150" class="img-thumbnail rounded" alt="...">
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </article>    
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<script>
+      // principle: a value option is equal to a div classname
+      var slt = document.getElementById("gallery");
+      slt.addEventListener("change", function() {
+            let gallery_folders = Array.from(document.querySelector('.gallery_content').children);
+            gallery_folders.forEach(folder => { folder.style.display = 'none';});
+            let actual_folder_class = slt.value.split(" ").join("_");
+            let actual_folder = document.querySelector(`.gallery_content .${actual_folder_class}`);
+            actual_folder.style.display = 'block';
+      });
+</script> 
+
+
